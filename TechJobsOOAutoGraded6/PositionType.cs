@@ -18,7 +18,7 @@ namespace TechJobsOOAutoGraded6
             Value = value;
         }
 
-        // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
+        // TODO: Task 2: Add custom Equals(), GetHashCode(), and ToString() methods.
     }
 }
 

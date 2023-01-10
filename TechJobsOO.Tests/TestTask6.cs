@@ -4,14 +4,10 @@ namespace TechJobsOO.Tests
 	[TestClass]
 	public class TestTask6
 	{
-
-        //task 5 tests should verify if students properly used inheritance once code is refactored. 
-
         //task 6 tests will verify that the refactoring changed the number of class members and info regarding JobField.
-
         //Tests have been numbered.
 
-       /* TODO: Remove this line to uncomment the tests
+       /* TODO: Task 6: Remove this line to uncomment the tests
 
         [TestMethod] //1
         public void Test_Attributes_Of_JobField()
@@ -19,6 +15,7 @@ namespace TechJobsOO.Tests
             //setup 
             Type jFType = typeof(JobField);
             var expected = jFType.Attributes.ToString().Contains("Abstract") ? "true" : "false";
+
             //verify
             Assert.AreEqual(expected, "true", "JobField is not an abstract class");
         }
@@ -33,6 +30,7 @@ namespace TechJobsOO.Tests
             int conLength = constructorInfos.Length;
             MethodInfo[] methodInfos = empType.GetMethods();
             int methodLength = methodInfos.Length;
+
             //verify
             Assert.AreEqual(1, conLength, "Employer class constructors not properly refactored");
             Assert.IsTrue(methodLength < 8, "Employer class methods not properly refactored");
@@ -48,6 +46,7 @@ namespace TechJobsOO.Tests
             int conLength = constructorInfos.Length;
             MethodInfo[] methodInfos = locType.GetMethods();
             int methodLength = methodInfos.Length;
+
             //verify
             Assert.AreEqual(1, conLength, "Location class constructors not properly refactored");
             Assert.IsTrue(methodLength < 8, "Location class methods not properly refactored");
@@ -63,6 +62,7 @@ namespace TechJobsOO.Tests
             int conLength = constructorInfos.Length;
             MethodInfo[] methodInfos = posType.GetMethods();
             int methodLength = methodInfos.Length;
+
             //verify
             Assert.AreEqual(1, conLength, "PositionType class constructors not properly refactored");
             Assert.IsTrue(methodLength < 8, "PositionType class methods not properly refactored");
@@ -78,12 +78,13 @@ namespace TechJobsOO.Tests
             int conLength = constructorInfos.Length;
             MethodInfo[] methodInfos = ccType.GetMethods();
             int methodLength = methodInfos.Length;
+
             //verify
             Assert.AreEqual(1, conLength, "CoreCompetency class constructors not properly refactored");
             Assert.IsTrue(methodLength < 8, "CoreCompetency class methods not properly refactored");
         }
 
-        TODO: Remove this line to uncomment the tests */
+        TODO: Task 6: Remove this line to uncomment the tests */
     }
 }
 

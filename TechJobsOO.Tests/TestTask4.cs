@@ -4,11 +4,12 @@ namespace TechJobsOO.Tests
     [TestClass]
 	public class TestTask4
 	{
-        //Task 4 Tests to verify students' unit tests.  Tests are numbered.
+        //Task 4 Tests to verify students' unit tests.
+        //Tests are numbered.
 
-        /* TODO: Remove this line to uncomment the tests
+        /* TODO: Task 4: Remove this line to uncomment the tests
 
-        [TestMethod]
+        [TestMethod] //1
         public void Test_TestSettingJobIdExists()
         {
             //setup
@@ -16,6 +17,7 @@ namespace TechJobsOO.Tests
             MemberInfo[] memberInfos = testType.GetMembers();
             string nameCheck = "TestSettingJobId";
             string existsCheck = "";
+
             foreach (var mCheck in memberInfos)
             {
                 if (mCheck.Name == nameCheck)
@@ -24,6 +26,7 @@ namespace TechJobsOO.Tests
                     break;
                 }
             }
+
             //verify test was created
             Assert.AreEqual("true", existsCheck, "'TestSettingJobId' not created");
         }
@@ -32,10 +35,12 @@ namespace TechJobsOO.Tests
         [TestMethod] //2
         public void Test_TestJobConstructorSetsAllFields()
         {
+            //setup
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
             string nameCheck = "TestJobConstructorSetsAllFields";
             string existsCheck = "";
+
             foreach (var mCheck in memberInfos)
             {
                 if (mCheck.Name == nameCheck)
@@ -44,6 +49,7 @@ namespace TechJobsOO.Tests
                     break;
                 }
             }
+
             //verify test was created
             Assert.AreEqual("true", existsCheck, "'TestJobConstructorSetsAllFields' not found");
         }
@@ -52,10 +58,12 @@ namespace TechJobsOO.Tests
         [TestMethod] //3
         public void Test_TestJobsForEquality()
         {
+            //setup
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
             string nameCheck = "TestJobsForEquality";
             string existsCheck = "";
+
             foreach (var mCheck in memberInfos)
             {
                 if (mCheck.Name == nameCheck)
@@ -64,11 +72,12 @@ namespace TechJobsOO.Tests
                     break;
                 }
             }
+
             //verify test was created
             Assert.AreEqual("true", existsCheck, "'TestJobsForEquality' not found");
         }
 
-    TODO: Remove this line to uncomment the tests */
+    TODO: Task 4: Remove this line to uncomment the tests */
 
     }
 }

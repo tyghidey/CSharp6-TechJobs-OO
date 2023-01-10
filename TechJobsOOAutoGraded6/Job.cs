@@ -13,9 +13,9 @@ namespace TechJobsOOAutoGraded6
     public PositionType JobType { get; set; }
     public CoreCompetency JobCoreCompetency { get; set; }
 
-    // TODO: Add the two necessary constructors.
+    // TODO: Task 3: Add the two necessary constructors.
 
-    // TODO: Generate Equals() and GetHashCode() methods.
+    // TODO: Task 3: Generate Equals() and GetHashCode() methods.
 
 */
     }
