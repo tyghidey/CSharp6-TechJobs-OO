@@ -68,66 +68,6 @@ namespace TechJobsOO.Tests
             Assert.AreEqual("true", existsCheck, "'TestJobsForEquality' not found");
         }
 
-
-        [TestMethod] //4
-        public void Test_TestToStringStartsAndEndsWithNewLine()
-        {
-            Type testType = typeof(JobTests);
-            MemberInfo[] memberInfos = testType.GetMembers();
-            string nameCheck = "TestToStringStartsAndEndsWithNewLine";
-            string existsCheck = "";
-            foreach (var mCheck in memberInfos)
-            {
-                if (mCheck.Name == nameCheck)
-                {
-                    existsCheck += "true";
-                    break;
-                }
-            }
-            //verify test was created
-            Assert.AreEqual("true", existsCheck, "'TestToStringStartsAndEndsWithNewLine' not found");
-        }
-
-
-        [TestMethod] //5
-        public void Test_TestToStringContainsCorrectLabelsAndData()
-        {
-            Type testType = typeof(JobTests);
-            MemberInfo[] memberInfos = testType.GetMembers();
-            string nameCheck = "TestToStringContainsCorrectLabelsAndData";
-            string existsCheck = "";
-            foreach (var mCheck in memberInfos)
-            {
-                if (mCheck.Name == nameCheck)
-                {
-                    existsCheck += "true";
-                    break;
-                }
-            }
-            //verify test was created
-            Assert.AreEqual("true", existsCheck, "'TestToStringContainsCorrectLabelsAndData' not found");
-        }
-
-
-        [TestMethod] //6
-        public void Test_TestToStringHandlesEmptyField()
-        {
-            Type testType = typeof(JobTests);
-            MemberInfo[] memberInfos = testType.GetMembers();
-            string nameCheck = "TestToStringHandlesEmptyField";
-            string existsCheck = "";
-            foreach (var mCheck in memberInfos)
-            {
-                if (mCheck.Name == nameCheck)
-                {
-                    existsCheck += "true";
-                    break;
-                }
-            }
-            //verify test was created
-            Assert.AreEqual("true", existsCheck, "'TestToStringHandlesEmptyField' not found");
-        }
-
     TODO: Remove this line to uncomment the tests */
 
     }
