@@ -4,8 +4,7 @@ namespace TechJobsOO.Tests
     [TestClass]
 	public class TestTask4
 	{
-        //Task 4 Tests to verify students' unit tests.
-        //Tests are numbered.
+        //Task 4 Tests to verify students' unit tests.  Tests are numbered.
 
         /* TODO: Task 4: Remove this line to uncomment the tests
 
@@ -35,7 +34,6 @@ namespace TechJobsOO.Tests
         [TestMethod] //2
         public void Test_TestJobConstructorSetsAllFields()
         {
-            //setup
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
             string nameCheck = "TestJobConstructorSetsAllFields";
@@ -58,7 +56,6 @@ namespace TechJobsOO.Tests
         [TestMethod] //3
         public void Test_TestJobsForEquality()
         {
-            //setup
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
             string nameCheck = "TestJobsForEquality";

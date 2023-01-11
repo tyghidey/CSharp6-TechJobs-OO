@@ -38,7 +38,7 @@ namespace TechJobsOO.Tests
             Assert.AreEqual(existsCheck, nameCheck, "No Second Constructor exists");
         }
 
-        
+
         [TestMethod] //2
         public void Test_Second_Location_Constructor_Initializes_Value()
         {
@@ -62,6 +62,7 @@ namespace TechJobsOO.Tests
             Assert.AreEqual(2, testLocation.Id, "Second constructor not able to update Id");
             Assert.IsFalse(testLocation.Id == 4, "Second constructor passes value to Id. Is this desirable?");
         }
+
 
         // Testing CoreCompetency --------------------------------------------------------
 
@@ -112,6 +113,8 @@ namespace TechJobsOO.Tests
             //verify
             Assert.AreEqual("false", existsCheck, "CoreComp should not have a setter");
         }
+
+
 
         // Testing PositionType --------------------------------------------------------
 
@@ -175,7 +178,7 @@ namespace TechJobsOO.Tests
             Assert.AreEqual(testPosition.Value.ToString(), "Quality Control", "ToString does not return same output as set value");
         }
 
-       TODO:  Task 2: Remove this line to uncomment the tests */
+        TODO: Task 2: Remove this line to uncomment the tests */
 
     }
 }

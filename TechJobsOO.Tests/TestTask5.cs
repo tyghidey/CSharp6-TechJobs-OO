@@ -2,18 +2,22 @@
 namespace TechJobsOO.Tests
 {
 	[TestClass]
-	public class TestTask5
-	{
+    public class TestTask5
+    {
         //Task 5 Tests used to verify that students are testing their custom ToString method.
-        //Uses jobs from the TechJob class.  Tests are numbered.
+        //Uses jobs from the Job class.
+        //Tests are numbered.
 
-        /* TODO: Task 5: Remove this line to uncomment the tests
+        /*TODO: Task 5: Remove this line to uncomment the tests
+
+        //Unit Test 1:  TestToStringStartsAndEndsWithNewLine  -----------------------
+
 
         [TestMethod]  //1
         public void TestToStringStartsAndEndsWithNewLineExists()
         {
             //test to verify that TestToStringStartsAndEndsWithNewLine exisits
-        
+
             //setup
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
@@ -44,13 +48,15 @@ namespace TechJobsOO.Tests
             string text = System.IO.File.ReadAllText("StartsAndEndsWithNewLine.txt").ToString();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
-            var techJob = new TechJob();
-            techJob.RunProgram();
+            var job = new RunTechJobs();
+            job.RunProgram();
             var output = stringWriter.ToString();
 
             //verify
             Assert.AreEqual(text, output, "New Line issue");
         }
+
+        //Unit Test 2: TestToStringContainsCorrectLabelsAndData -----------------------
 
 
         [TestMethod]  //3
@@ -81,13 +87,14 @@ namespace TechJobsOO.Tests
         [TestMethod]  //4
         public void Test_TestToStringContainsCorrectLabelsAndData()
         {
-            //comparing output
+            //comparing output to a text file.
+            //id numbers may get a little wonky
 
             //setup
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
-            var techJob = new TechJob();
-            techJob.RunProgram();
+            var job = new RunTechJobs();
+            job.RunProgram();
             var output = stringWriter.ToString();
 
             //verify
@@ -95,11 +102,14 @@ namespace TechJobsOO.Tests
         }
 
 
+        //Unit Test 3: TestToStringHandlesEmptyField --------------------
+
         [TestMethod] //5
         public void TestToStringHandlesEmptyField_Exists()
         {
             //test to verify that TestToStringHandlesEmptyField exisits
             //setup
+
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
             string nameCheck = "TestToStringHandlesEmptyField";
@@ -114,7 +124,7 @@ namespace TechJobsOO.Tests
                 }
             }
 
-            //verify
+            //verify test was created
             Assert.AreEqual("true", existsCheck, "'TestToStringHandlesEmptyField' not created");
         }
 
@@ -125,20 +135,19 @@ namespace TechJobsOO.Tests
             //comparing output to a text file.
             //id numbers may get a little wonky
 
-            //setup
             string text = System.IO.File.ReadAllText("EmptyFieldTest.txt").ToString();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
-            var techJob = new TechJob();
-            techJob.RunProgram();
+            var job = new RunTechJobs();
+            job.RunProgram();
             var output = stringWriter.ToString();
 
             //verify
             Assert.AreEqual(text, output, "Empty string handling error");
         }
-
-        TODO: Remove this line to uncomment the tests */
+        TODO: Task 5: Remove this line to uncomment the tests*/
 
     }
+
 }
 
