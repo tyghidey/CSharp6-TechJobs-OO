@@ -15,7 +15,7 @@ namespace TechJobsOOAutoGraded6
 
             // TODO: Task 3: Add the two necessary constructors.
 
-            // TODO: Task 3: Generate Equals() and GetHashCode() methods.
+            // TODO: Task 3: Generate Equals() and GetHashCode() methods.  
 
             // TODO: Task 5: Generate custom ToString() method.
                 //Until you create this method, you will not be able to print a job to the console.
