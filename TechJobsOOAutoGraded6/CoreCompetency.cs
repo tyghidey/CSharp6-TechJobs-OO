@@ -20,7 +20,7 @@ namespace TechJobsOOAutoGraded6
             Value = v; 
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return obj is CoreCompetency competency &&
                    Id == competency.Id;
