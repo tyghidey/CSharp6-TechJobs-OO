@@ -11,6 +11,7 @@ namespace TechJobs.Tests
         Job job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job5 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
       
         [TestMethod]
 
@@ -18,17 +19,33 @@ namespace TechJobs.Tests
             Assert.IsFalse(job1.Id == job2.Id);
             Assert.IsTrue(job1.Id - job2.Id == -1 );
         }
-
+        [TestMethod]
         public void TestJobConstructorSetsAllFields() {
             Assert.AreEqual("Product tester", job3.Name);
-            Assert.AreEqual("ACME", job3.EmployerName);
-            Assert.AreEqual("Desert", job3.EmployerLocation);
-            Assert.AreEqual("Quality control", job3.JobType);
-            Assert.AreEqual("Persistence", job3.JobCoreCompetency);
+            Assert.AreEqual("ACME", job3.EmployerName.Value);
+            Assert.AreEqual("Desert", job3.EmployerLocation.Value);
+            Assert.AreEqual("Quality control", job3.JobType.Value);
+            Assert.AreEqual("Persistence", job3.JobCoreCompetency.Value);
         }
-
+        [TestMethod]
         public void TestJobsForEquality() {
-            Assert.AreEqual(job3, job4);
+            Assert.AreNotEqual(job3, job4);
+        }
+        [TestMethod]
+        public void TestToStringStartsAndEndsWithNewLine() {
+            Assert.IsTrue(job3.ToString().StartsWith(Environment.NewLine));
+            Assert.IsTrue(job3.ToString().EndsWith(Environment.NewLine));
+
+        }
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData() {
+            string newLine = Environment.NewLine;
+            Assert.AreEqual(newLine + "ID: 18" + newLine + "Name: Product tester" + newLine + "Employer: ACME" + newLine + "Location: Desert" + newLine + "Position Type: Quality control" + newLine + "Core Competency: Persistence" + newLine, job3.ToString());
+        }
+        [TestMethod]
+        public void TestToStringHandlesEmptyField() {
+            string newLine = Environment.NewLine;
+            Assert.AreEqual(newLine + "ID: 18" + newLine + "Name: Product tester" + newLine + "Employer: Data not available" + newLine + "Location: Desert" + newLine + "Position Type: Quality control" + newLine + "Core Competency: Persistence" + newLine, job5.ToString());
         }
     }
 }
