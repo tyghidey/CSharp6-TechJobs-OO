@@ -40,13 +40,13 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestToStringContainsCorrectLabelsAndData() {
             string newLine = Environment.NewLine;
-            Assert.AreEqual(newLine + "ID: 18" + newLine + "Name: Product tester" + newLine + "Employer: ACME" + newLine + "Location: Desert" + newLine + "Position Type: Quality control" + newLine + "Core Competency: Persistence" + newLine, job3.ToString());
+            Assert.AreEqual(newLine + "ID: " + job3.Id + newLine + "Name: " + job3.Name + newLine + "Employer: " + job3.EmployerName + newLine + "Location: " + job3.EmployerLocation + newLine + "Position Type: " + job3.JobType + newLine + "Core Competency: " + job3.JobCoreCompetency + newLine, job3.ToString());
+        // use tests already est. no hard coding
         }
         [TestMethod]
         public void TestToStringHandlesEmptyField() {
             string newLine = Environment.NewLine;
-            Assert.AreEqual(newLine + "ID: 18" + newLine + "Name: Product tester" + newLine + "Employer: Data not available" + newLine + "Location: Desert" + newLine + "Position Type: Quality control" + newLine + "Core Competency: Persistence" + newLine, job5.ToString());
+            Assert.AreEqual(newLine + "ID: " + job5.Id + newLine + "Name: Product tester" + newLine + "Employer: Data not available" + newLine + "Location: Desert" + newLine + "Position Type: Quality control"  + newLine + "Core Competency: Persistence" + newLine, job5.ToString());
         }
     }
 }
-
